@@ -1,0 +1,49 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.hello-react {
+  font-size: 3em;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.hello-react .react {
+  font-weight: bold;
+  color: blue;
+}
+
+.navbar {
+  background-color: #706f6f;
+  overflow: hidden;
+}
+
+.navbar-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar-item {
+  float: left;
+}
+
+.navbar-item a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.navbar-item a:hover {
+  background-color: green;
+  color: black;
+}
+
+.navbar-item.active a {
+  background-color: green;
+  color: black;
+}
