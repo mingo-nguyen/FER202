@@ -1,0 +1,139 @@
+.app {
+  min-height: 100vh;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-collapse {
+  display: flex;
+  align-items: center;
+}
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
+.hero {
+  height: 500px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('event-4.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content {
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+}
+
+
+.menu-section {
+  padding: 5rem 0;
+  background-color: #1a1a1a;
+}
+
+.menu-section h2 {
+  color: white;
+}
+
+.card {
+  background-color: #2a2a2a;
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-title {
+  color: white;
+}
+
+.price-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: white;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.sale-price {
+  color: #ffc107;
+}
+
+.new-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #28a745;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+}
+
+
+.booking-section {
+  padding: 5rem 0;
+  background-color: #2a2a2a;
+}
+
+.booking-section h2 {
+  color: white;
+}
+
+.form-control, .form-select {
+  background-color: #1a1a1a;
+  border: 1px solid #444;
+  color: white;
+}
+
+.form-control:focus, .form-select:focus {
+  background-color: #1a1a1a;
+  border-color: #ffc107;
+  color: white;
+  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+}
+
+.form-control::placeholder {
+  color: #888;
+}
+
+.btn-warning {
+  padding: 0.75rem 2.5rem;
+  font-weight: 600;
+}
