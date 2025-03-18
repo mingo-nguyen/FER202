@@ -1,0 +1,188 @@
+/* Glassmorphism Style CSS */
+
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.15);
+    --glass-border: rgba(255, 255, 255, 0.18);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    --glass-radius: 15px;
+    --primary-color: #4158D0;
+    --gradient-bg: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  }
+  
+  body {
+    background: var(--gradient-bg);
+    background-attachment: fixed;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Glass container styles */
+  .glass-container {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: var(--glass-radius);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    padding: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Navbar glassmorphism */
+  .navbar-glass {
+    background: var(--glass-bg) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+  }
+  
+  .navbar-glass .navbar-brand {
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+  .navbar-glass .nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-glass .nav-link:hover {
+    color: white !important;
+    transform: translateY(-2px);
+  }
+  
+  .navbar-glass .navbar-text {
+    color: white !important;
+  }
+  
+  /* Card glassmorphism */
+  .glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: var(--glass-radius);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    padding: 20px;
+    transition: all 0.3s ease;
+    height: 100%;
+    color: white;
+  }
+  
+  .glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.45);
+  }
+  
+  .glass-card .card-title {
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: white;
+  }
+  
+  .glass-card .card-subtitle {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-weight: 500;
+  }
+  
+  .glass-card .card-text {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 15px 0;
+  }
+  
+  /* Button styles */
+  .btn-glass {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    border-radius: 30px;
+    padding: 8px 20px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-glass:hover {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 5px 15px rgba(31, 38, 135, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  .btn-glass-primary {
+    background: rgba(65, 88, 208, 0.7);
+  }
+  
+  .btn-glass-primary:hover {
+    background: rgba(65, 88, 208, 0.8);
+  }
+  
+  /* Form styles */
+  .form-control-glass {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: white;
+    padding: 12px 15px;
+  }
+  
+  .form-control-glass:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+  
+  .form-control-glass::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .form-label {
+    color: white;
+    font-weight: 500;
+  }
+  
+  /* Alert styles */
+  .alert-glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: var(--glass-radius);
+    border: 1px solid var(--glass-border);
+    color: white;
+  }
+  
+  .alert-glass-success {
+    border-left: 4px solid #28a745;
+  }
+  
+  .alert-glass-danger {
+    border-left: 4px solid #dc3545;
+  }
+  
+  /* Product detail */
+  .detail-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Page title */
+  .page-title {
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+  /* Product grid */
+  .product-grid {
+    margin-top: 20px;
+  }
