@@ -1,0 +1,200 @@
+/* Glassmorphism styles for About component */
+.about-container {
+    padding: 40px 0;
+  }
+  
+  .about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: justify;
+  }
+  
+  /* Icon container with glassmorphism effect */
+  .glass-icon-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 40px 0;
+  }
+  
+  .glass-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 120px;
+    height: 120px;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+  }
+  
+  .glass-icon:hover {
+    transform: translateY(-10px) scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 25px rgba(31, 38, 135, 0.15);
+  }
+  
+  .glass-icon i {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, #0d6efd, #6610f2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 10px rgba(13, 110, 253, 0.3);
+  }
+  
+  .glass-icon span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* Special card styling for About page */
+  .about-container .glass-card {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .about-container .glass-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+    transform: rotate(30deg);
+    z-index: -1;
+    pointer-events: none;
+  }
+  
+  /* Enhanced divider for About page */
+  .about-container .glass-divider {
+    height: 3px;
+    background: linear-gradient(to right, 
+      rgba(255, 255, 255, 0),
+      rgba(13, 110, 253, 0.3),
+      rgba(102, 16, 242, 0.3),
+      rgba(13, 110, 253, 0.3),
+      rgba(255, 255, 255, 0));
+    margin: 25px 0 35px;
+    border-radius: 3px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .glass-icon-container {
+      gap: 20px;
+    }
+    
+    .glass-icon {
+      width: 100px;
+      height: 100px;
+      padding: 15px;
+    }
+    
+    .glass-icon i {
+      font-size: 2rem;
+    }
+  }
+  
+  /* Animation for the icon container */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .glass-icon-container {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  .glass-icon:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  
+  .glass-icon:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  
+  .glass-icon:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+
+  /* Add to About.css if using the expanded component */
+.about-features {
+    margin: 30px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .feature-heading {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .feature-list {
+    list-style-type: none;
+    padding-left: 0;
+    columns: 2;
+    column-gap: 20px;
+  }
+  
+  .feature-list li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .feature-list li i {
+    color: #0d6efd;
+    margin-right: 10px;
+    font-size: 1.1rem;
+  }
+  
+  .glass-btn {
+    background: rgba(13, 110, 253, 0.3);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(13, 110, 253, 0.2);
+    border-radius: 10px;
+    padding: 10px 25px;
+    color: #0d6efd;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.1);
+  }
+  
+  .glass-btn:hover {
+    background: rgba(13, 110, 253, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(13, 110, 253, 0.2);
+    color: white;
+  }
+  
+  @media (max-width: 576px) {
+    .feature-list {
+      columns: 1;
+    }
+  }

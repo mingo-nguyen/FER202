@@ -1,0 +1,160 @@
+/* Glassmorphism styles for Contact component */
+.contact-container {
+    padding: 40px 0;
+  }
+  
+  .contact-intro {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  /* Glass input styling */
+  .glass-input {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 12px 15px;
+    color: #333;
+    transition: all 0.3s ease;
+  }
+  
+  .glass-input:focus {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(31, 38, 135, 0.1);
+    border-color: rgba(13, 110, 253, 0.3);
+  }
+  
+  .glass-input:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  .glass-input::placeholder {
+    color: #888;
+  }
+  
+  /* Form label styling */
+  .form-label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    display: inline-block;
+  }
+  
+  .form-label i {
+    color: #0d6efd;
+  }
+  
+  /* Glass alert styling */
+  .glass-alert {
+    background: rgba(25, 135, 84, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(25, 135, 84, 0.2);
+    color: #198754;
+    font-weight: 500;
+  }
+  
+  /* Contact info section */
+  .contact-info {
+    margin-top: 40px;
+  }
+  
+  .contact-method {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .contact-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(13, 110, 253, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    transition: all 0.3s ease;
+  }
+  
+  .contact-icon i {
+    font-size: 1.5rem;
+    color: #0d6efd;
+  }
+  
+  .contact-method:hover .contact-icon {
+    transform: scale(1.1) rotate(5deg);
+    background: rgba(13, 110, 253, 0.2);
+  }
+  
+  .contact-detail h5 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .contact-detail p {
+    margin-bottom: 0;
+    color: #666;
+  }
+  
+  /* Glass button styling - this can be inherited from your global styles */
+  .glass-btn {
+    background: rgba(13, 110, 253, 0.3);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(13, 110, 253, 0.2);
+    border-radius: 10px;
+    padding: 10px 25px;
+    color: #0d6efd;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.1);
+  }
+  
+  .glass-btn:hover {
+    background: rgba(13, 110, 253, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(13, 110, 253, 0.2);
+    color: white;
+  }
+  
+  /* Animation for content */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .contact-form {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  .contact-info {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .contact-method {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .contact-icon {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
