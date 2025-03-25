@@ -2,20 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Container, Card, Button } from 'react-bootstrap';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getProductById } from '../services/api';
-import { useCart } from '../context/CartContext';
+
 const ProductDetail = () => {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const { id } = useParams();
   const navigate = useNavigate();
-  const { addToCart } = useCart();
-
-  const handleAddToCart = () => {
-    if (product) {
-      addToCart(product);
-    }
-  };
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -61,14 +54,9 @@ const ProductDetail = () => {
               <strong>Stock:</strong> {product.stock}<br />
               <strong>Description:</strong> {product.description}
             </Card.Text>
-            <div className="d-flex justify-content-between">
-              <Button className="btn-glass mt-3" onClick={handleBack}>
-                Back to Products
-              </Button>
-              <Button className="btn-glass btn-glass-success mt-3" onClick={handleAddToCart}>
-                <i className="bi bi-cart-plus me-2"></i> Add to Cart
-              </Button>
-            </div>
+            <Button className="btn-glass mt-3" onClick={handleBack}>
+              Back to Products
+            </Button>
           </Card.Body>
         </div>
       </div>

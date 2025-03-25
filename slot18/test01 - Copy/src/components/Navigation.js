@@ -1,21 +1,18 @@
 import React from 'react';
 import { Navbar, Container, Nav, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import { useCart } from '../context/CartContext';
 
 const Navigation = () => {
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem('user'));
-  const { cartItems } = useCart();
-  const cartItemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+
   const handleLogout = () => {
     localStorage.removeItem('user');
     navigate('/login');
   };
 
-
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" className="navbar-glass">
+    <Navbar bg="dark" variant="dark" expand="lg">
       <Container>
         <Navbar.Brand href="/products">Product Management App</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -24,14 +21,6 @@ const Navigation = () => {
             {user && <Nav.Link href="/products">Products</Nav.Link>}
           </Nav>
           <Nav>
-            {user && (
-              <Nav.Link href="/cart" className="me-3">
-                <i className="bi bi-cart"></i> Cart
-                {cartItemCount > 0 && (
-                  <span className="ms-1 badge bg-primary rounded-pill">{cartItemCount}</span>
-                )}
-              </Nav.Link>
-            )}
             {user ? (
               <>
                 <Navbar.Text className="me-3">
