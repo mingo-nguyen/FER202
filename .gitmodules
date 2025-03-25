@@ -1,0 +1,3 @@
+[submodule "openautomate.ui"]
+	path = openautomate.ui
+	url = https://github.com/mingo-nguyen/openautomate.ui.git
